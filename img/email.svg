@@ -60,10 +60,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="90.563274"
-     inkscape:cy="53.558922"
+     inkscape:cx="233.30299"
+     inkscape:cy="51.538617"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -89,7 +89,7 @@
      inkscape:snap-page="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-global="false" />
+     inkscape:snap-global="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -107,15 +107,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-45.130598,-86.649168)"
-     style="display:inline;opacity:1"
-     sodipodi:insensitive="true">
+     style="display:inline;opacity:1">
     <rect
        id="rect10"
-       width="126.04226"
-       height="40.828682"
-       x="46.109474"
-       y="86.841614"
-       style="fill:#ffbd07;fill-opacity:0.29411765;stroke:#ffbd07;stroke-width:1.95775056;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="128"
+       height="41.999996"
+       x="45.130596"
+       y="86.64917"
+       style="fill:#ffbd07;fill-opacity:0.29411765;stroke:none;stroke-width:2.00099587;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        aria-label="E-mail"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:'Old Standard TT';-inkscape-font-specification:'Old Standard TT';letter-spacing:0px;word-spacing:0px;fill:#ffbd07;fill-opacity:1;stroke:none;stroke-width:0.26458332"

@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="-1.1114248"
-     inkscape:cy="52.896572"
+     inkscape:zoom="1.4"
+     inkscape:cx="232.02206"
+     inkscape:cy="52.515254"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -89,7 +89,7 @@
      inkscape:snap-page="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-global="false" />
+     inkscape:snap-global="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -110,11 +110,11 @@
      style="display:inline">
     <rect
        id="rect10"
-       width="126.04226"
-       height="40.828682"
-       x="46.109474"
-       y="86.841614"
-       style="fill:#1e96c8;fill-opacity:0.29460581;stroke:#1e96c8;stroke-width:1.95775056;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="128"
+       height="41.999996"
+       x="45.130596"
+       y="86.64917"
+       style="fill:#1e96c8;fill-opacity:0.29460581;stroke:none;stroke-width:2.00099587;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        id="g853"
        transform="matrix(0.10644886,0,0,0.10644886,55.965725,94.816561)">

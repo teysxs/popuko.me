@@ -60,8 +60,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="111.70485"
-     inkscape:cy="14.216733"
+     inkscape:cx="180.60445"
+     inkscape:cy="11.35959"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -89,7 +89,7 @@
      inkscape:snap-page="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-global="false" />
+     inkscape:snap-global="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -110,11 +110,11 @@
      style="display:inline">
     <rect
        id="rect10"
-       width="126.04226"
-       height="40.828682"
-       x="46.109474"
-       y="86.841614"
-       style="fill:#24d768;fill-opacity:0.29411766;stroke:#24d768;stroke-width:1.95775056;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="128"
+       height="41.999996"
+       x="45.130596"
+       y="86.64917"
+       style="fill:#24d768;fill-opacity:0.29411765;stroke:none;stroke-width:2.00099587;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        aria-label="More"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:'Old Standard TT';-inkscape-font-specification:'Old Standard TT';letter-spacing:0px;word-spacing:0px;fill:#24d768;fill-opacity:1;stroke:none;stroke-width:0.26458332"

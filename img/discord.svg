@@ -26,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="28.01737"
-     inkscape:cy="108.71625"
+     inkscape:cx="73.822793"
+     inkscape:cy="104.67564"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
@@ -44,7 +44,7 @@
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
      inkscape:snap-page="true"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      inkscape:window-width="1600"
      inkscape:window-height="836"
      inkscape:window-x="0"
@@ -69,11 +69,11 @@
      transform="translate(0,-255)">
     <rect
        id="rect10"
-       width="126.06061"
-       height="40.060604"
-       x="0.96969473"
-       y="255.9697"
-       style="display:inline;fill:#7289da;fill-opacity:0.29411766;stroke:#7289da;stroke-width:1.93938947;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="128"
+       height="42"
+       x="-1.7763568e-15"
+       y="255"
+       style="display:inline;fill:#7289da;fill-opacity:0.29411765;stroke:none;stroke-width:2.00099611;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        aria-label="Discord"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:'Old Standard TT';-inkscape-font-specification:'Old Standard TT';letter-spacing:0px;word-spacing:0px;fill:#7289da;fill-opacity:1;stroke:none;stroke-width:0.26458332"
