@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="293.00638"
-     inkscape:cy="48.855962"
+     inkscape:zoom="1.4"
+     inkscape:cx="226.00098"
+     inkscape:cy="182.24443"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -89,7 +89,13 @@
      inkscape:snap-page="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-global="true" />
+     inkscape:snap-global="true">
+    <sodipodi:guide
+       position="12.000744,63.452753"
+       orientation="1,0"
+       id="guide867"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -158,7 +164,7 @@
     </g>
     <g
        id="g935"
-       transform="matrix(0.0404982,0,0,0.0404982,56.957833,96.109657)">
+       transform="matrix(0.0362954,0,0,0.0362954,57.131342,97.707387)">
       <g
          id="g862">
         <linearGradient

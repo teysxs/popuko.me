@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="232.02206"
-     inkscape:cy="52.515254"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="146.16741"
+     inkscape:cy="222.1255"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -89,7 +89,13 @@
      inkscape:snap-page="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-global="true" />
+     inkscape:snap-global="true">
+    <sodipodi:guide
+       position="11.99372,45.43582"
+       orientation="1,0"
+       id="guide836"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -117,7 +123,7 @@
        style="fill:#1e96c8;fill-opacity:0.29460581;stroke:none;stroke-width:2.00099587;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        id="g853"
-       transform="matrix(0.10644886,0,0,0.10644886,55.965725,94.816561)">
+       transform="matrix(0.08333333,0,0,0.08333333,57.124318,97.451185)">
       <circle
          id="circle829"
          r="120"
