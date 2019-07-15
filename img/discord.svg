@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="174.54211"
-     inkscape:cy="80.446158"
+     inkscape:zoom="1.979899"
+     inkscape:cx="340.87411"
+     inkscape:cy="125.7257"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
@@ -44,7 +44,7 @@
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
      inkscape:snap-page="true"
-     inkscape:snap-global="true"
+     inkscape:snap-global="false"
      inkscape:window-width="1600"
      inkscape:window-height="836"
      inkscape:window-x="0"
@@ -58,9 +58,29 @@
        id="guide826"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="112.52047,20.178849"
+       position="115.47172,20.032738"
        orientation="0,1"
-       id="guide830"
+       id="guide833"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="32.005525,49.678723"
+       orientation="1,0"
+       id="guide835"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="40.023611,36.615925"
+       orientation="1,0"
+       id="guide837"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="50.501162,38.104724"
+       orientation="1,0"
+       id="guide839"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="42.495854,38.754081"
+       orientation="1,0"
+       id="guide841"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
@@ -80,18 +100,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-255)">
-    <rect
-       id="rect10"
-       width="128"
-       height="42"
-       x="-1.7763568e-15"
-       y="255"
-       style="display:inline;fill:#7289da;fill-opacity:0.29411765;stroke:none;stroke-width:2.00099611;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        aria-label="Discord"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:'Old Standard TT';-inkscape-font-specification:'Old Standard TT';letter-spacing:0px;word-spacing:0px;fill:#7289da;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        id="text1475"
-       transform="translate(2.6458334)">
+       transform="translate(-2.4230622,0.62403568)">
       <path
          d="m 52.924225,280.0455 c 0,0.6985 0.381,1.0795 1.0795,1.0795 h 2.2098 c 3.2004,0 5.207,-1.6129 5.207,-4.8133 0,-3.5052 -2.4003,-4.7752 -5.207,-4.7752 h -2.2098 c -0.6985,0 -1.0795,0.381 -1.0795,1.0795 z m 2.413,-0.8509 v -5.7404 h 0.8763 c 1.6637,0 2.6797,0.7493 2.6797,2.8194 0,2.286 -1.1049,2.921 -2.6797,2.921 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Jellee;-inkscape-font-specification:Jellee;fill:#7289da;fill-opacity:1;stroke-width:0.26458332"
@@ -128,11 +141,20 @@
          id="path832"
          inkscape:connector-curvature="0" />
     </g>
+    <rect
+       style="fill:#dac372;fill-opacity:1;stroke:none;stroke-width:1.95799994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect831"
+       width="2.5"
+       height="16"
+       x="40.023613"
+       y="268.95477"
+       ry="1.25" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="Layer 2">
+     inkscape:label="Layer 2"
+     style="display:inline">
     <g
        id="g924"
        transform="matrix(0.11428571,0,0,0.11428571,8.0007441,8.919645)">

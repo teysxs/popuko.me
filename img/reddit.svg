@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="178.88871"
-     inkscape:cy="148.79063"
+     inkscape:zoom="2"
+     inkscape:cx="167.49973"
+     inkscape:cy="209.27069"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -95,6 +95,26 @@
        orientation="1,0"
        id="guide846"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="32.009858,61.114024"
+       orientation="1,0"
+       id="guide847"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="111.69196,20.977678"
+       orientation="0,1"
+       id="guide849"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="39.998554,76.819107"
+       orientation="1,0"
+       id="guide851"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="50.502246,58.126111"
+       orientation="1,0"
+       id="guide861"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -114,18 +134,11 @@
      id="layer1"
      transform="translate(-45.130598,-86.649168)"
      style="display:inline">
-    <rect
-       id="rect10"
-       width="128"
-       height="42"
-       x="45.130596"
-       y="86.64917"
-       style="fill:#000000;fill-opacity:0.29411765;stroke:none;stroke-width:2.00125098;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        aria-label="Reddit"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:'Old Standard TT';-inkscape-font-specification:'Old Standard TT';letter-spacing:0px;word-spacing:0px;fill:#4b4b4b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        id="text857"
-       transform="translate(-1.0583333,0.52916667)">
+       transform="translate(-9.2339852,0.78854634)">
       <path
          d="m 104.86683,111.10781 c 0,0.6731 0.5461,1.2192 1.2192,1.2192 0.6731,0 1.2192,-0.5461 1.2192,-1.2192 v -2.159 h 1.2827 l 1.4224,2.7432 c 0.1905,0.381 0.5969,0.635 1.0414,0.635 0.6604,0 1.1811,-0.5207 1.1811,-1.1684 0,-0.2032 -0.0508,-0.3937 -0.1397,-0.5461 l -1.1938,-2.2987 v -0.0254 c 1.0541,-0.5207 1.7018,-1.4478 1.7018,-2.7178 0,-1.8796 -1.3589,-2.9337 -3.5433,-2.9337 h -3.1115 c -0.6985,0 -1.0795,0.381 -1.0795,1.0795 z m 2.4384,-4.0894 v -2.5908 h 1.2319 c 0.8255,0 1.5621,0.2286 1.5621,1.3081 0,1.0541 -0.7366,1.2827 -1.5621,1.2827 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Jellee;-inkscape-font-specification:Jellee;fill:#4b4b4b;fill-opacity:1;stroke-width:0.26458332"
@@ -159,7 +172,7 @@
     </g>
     <g
        id="g888"
-       transform="matrix(0.07149292,0,0,0.07829371,57.131342,95.42107)"
+       transform="matrix(0.07149292,0,0,0.07829371,57.131342,94.891903)"
        style="fill:#4b4b4b;fill-opacity:1">
       <path
          id="path833"
@@ -212,6 +225,14 @@
          id="g863"
          style="fill:#4b4b4b;fill-opacity:1" />
     </g>
+    <rect
+       style="fill:#4b4b4b;fill-opacity:1;stroke:none;stroke-width:1.95799994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect831"
+       width="2.5"
+       height="16"
+       x="85.12915"
+       y="99.671486"
+       ry="1.25" />
   </g>
   <g
      inkscape:groupmode="layer"
