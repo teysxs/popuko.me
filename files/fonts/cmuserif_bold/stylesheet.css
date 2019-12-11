@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'cmu_serifbold';
+    src: url('/files/fonts/cmuserif_bold/cmunbx-webfont.eot');
+    src: url('/files/fonts/cmuserif_bold/cmunbx-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/files/fonts/cmuserif_bold/cmunbx-webfont.woff2') format('woff2'),
+         url('/files/fonts/cmuserif_bold/cmunbx-webfont.woff') format('woff'),
+         url('/files/fonts/cmuserif_bold/cmunbx-webfont.ttf') format('truetype'),
+         url('/files/fonts/cmuserif_bold/cmunbx-webfont.svg#cmu_serifbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

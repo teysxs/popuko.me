@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'cmu_serifroman';
+    src: url('/files/fonts/cmuserif_roman/cmunrm-webfont.eot');
+    src: url('/files/fonts/cmuserif_roman/cmunrm-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/files/fonts/cmuserif_roman/cmunrm-webfont.woff2') format('woff2'),
+         url('/files/fonts/cmuserif_roman/cmunrm-webfont.woff') format('woff'),
+         url('/files/fonts/cmuserif_roman/cmunrm-webfont.ttf') format('truetype'),
+         url('/files/fonts/cmuserif_roman/cmunrm-webfont.svg#cmu_serifroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
