@@ -47,7 +47,8 @@ p {
 }
 
 .l {
-    font-family: cmu_serifbold, sans-serif
+    font-family: cmu_serifbold, sans-serif;
+    padding: 0px 5% 0px 5%;
 }
 
 img {
