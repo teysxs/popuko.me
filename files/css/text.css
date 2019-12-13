@@ -7,6 +7,14 @@ a {
     color: #556fb5;
 }
 
+img {
+    width: 84%;
+    margin: 24px auto;
+    display: block;
+    padding: 3%;
+    background: #ececec;
+}
+
 @media (
     prefers-color-scheme: dark
 ) {
@@ -17,6 +25,10 @@ a {
     
     a {
 	color: #a6e3e9;
+    }
+
+    img {
+	background: #494949;
     }
 }
 
@@ -29,6 +41,16 @@ body {
 
 p {
     font-family: crimsonroman, sans-serif
+}
+
+.q {
+    padding: 0px 15% 0px 15%;
+    text-decoration: underline dashed;
+}
+
+.qa {
+    text-align: right;
+    padding: 0px 10% 0px 10%;
 }
 
 .h1, .h2, .h3 {
@@ -49,12 +71,6 @@ p {
 .l {
     font-family: cmu_serifbold, sans-serif;
     padding: 0px 5% 0px 5%;
-}
-
-img {
-    width: 90%;
-    margin: auto;
-    display: block;
 }
 
 .centered {
