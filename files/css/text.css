@@ -1,6 +1,6 @@
 html {
     background: #fff;
-    color: #222;
+    color: #333;
 }
 
 a {
@@ -19,7 +19,7 @@ img {
     prefers-color-scheme: dark
 ) {
     html {
-	background: #222;
+	background: #333;
 	color: #eee;
     }
     
@@ -61,6 +61,10 @@ p {
 
 .h1 {
     font-size: 34px;
+}
+
+.h2 {
+    font-size: 28px;
 }
 
 .p {
