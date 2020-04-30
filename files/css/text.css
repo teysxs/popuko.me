@@ -16,29 +16,34 @@ img {
 }
 
 hr {
-    width: 50%;
-    height: 2px;
-    border-width: 0;
+    width: 90%;
+    height: 0px;
+    border-width: 0px;
     margin-top: 32px;
     margin-bottom: 32px;
-	background-color: #555;
+    border-top: dashed 2px;
+    border-color: #333;
 }
 
 @media (
     prefers-color-scheme: dark
 ) {
     html {
-	background: #333;
-	color: #eee;
+		background: #333;
+		color: #eee;
     }
     
     a {
-	color: #a6e3e9;
+		color: #a6e3e9;
     }
 
     img {
-	background: #494949;
+		background: #494949;
     }
+
+	hr {
+		border-color: #eee;
+	}
 }
 
 body {
