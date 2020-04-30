@@ -3,9 +3,9 @@
 
 
 @font-face {
-    font-family: 'vollkornregular';
-    src: url('/files/fonts/vollkorn_regular/vollkorn-regular-webfont.woff2') format('woff2'),
-         url('/files/fonts/vollkorn_regular/vollkorn-regular-webfont.woff') format('woff');
+    font-family: 'vollkorn';
+    src: url('/files/fonts/vollkorn_regular/vollkorn-regular.woff2') format('woff2'),
+         url('/files/fonts/vollkorn_regular/vollkorn-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
