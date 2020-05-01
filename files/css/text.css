@@ -4,7 +4,7 @@ html {
 }
 
 a {
-    color: #556fb5;
+    color: #2f95a4;
 }
 
 img {
@@ -23,6 +23,14 @@ hr {
     margin-bottom: 32px;
     border-top: dashed 2px;
     border-color: #333;
+}
+
+.q {
+    padding: 8px 5%;
+    background: #fbfbfb;
+    border-left: 5px solid #ff91aa;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 @media (
@@ -44,6 +52,10 @@ hr {
 	hr {
 		border-color: #eee;
 	}
+
+	.q {
+		background: #3e3d3d;
+	}
 }
 
 body {
@@ -55,11 +67,6 @@ body {
 
 p {
     font-family: crimson, vollkorn, sans-serif
-}
-
-.q {
-    padding: 0px 15%;
-    text-decoration: underline dashed
 }
 
 .qa {
