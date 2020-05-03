@@ -47,3 +47,10 @@ img {
     display: inline-block;
     margin: 5px 0px 15px 38px
 }
+
+.bottom-row-more {
+    width: 10%;
+    display: inline-block;
+    margin: 5px 38px 15px 38px;
+	float: right
+}
