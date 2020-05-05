@@ -19,7 +19,7 @@ hr {
 	background: #222;
     }
     .crap-in-dark {
-	filter: invert()
+		filter: invert();
     }
     .instalogo {
 	filter: brightness(1.3)

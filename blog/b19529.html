@@ -1,0 +1,122 @@
+<!DOCTYPE html><html>
+<head>
+<meta
+charset="utf-8"><meta
+name="viewport" content="width=device-width, initial-scale=1">
+<title>Reproducible builds are (not) sufficient</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/files/css/text.css">
+<link rel="stylesheet" href="/files/fonts/cmuserif_bold/stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="/files/fonts/crimson_roman/stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="/files/fonts/luxi_regular/stylesheet.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+  <p class="h1">Reproducible builds are (not) sufficient
+  <p class="p"><a href="https://reproducible-builds.org">Reproducible builds</a> is a set of practices, in accordance to which FOSS software distributor encouraged to provide build flags, environment details, state of hardware, etc. needed to consistently recreate, with binary precision, exactly identical copy of distributed software from publically available source.
+  <p class="p">At the time of writing, <a href="https://tests.reproducible-builds.org/debian/reproducible.html">94%</a> out of 24821 packages in Debian main repository claimed to be reproducible. However, there is a question: &quot;Is mere fact that shipped build is reproducible could signify at least some extra reliability by itself, or could it be simply a clever trick to substitute trust in a distribution maintainer with an exact same amount of trust in an assumed depersonalized third-party auditor supposed to be responsible for verifying maintainer's work&quot;.
+  <p class="p">Let's simulate some thought process on this topic.
+  <p class="h3">Why does it matter
+  <p class="p">Infrastructure built around free software distribution naturally caters to high standards of transparency and reliability; ideally, every user has to be sure to some extent that software user runs will never do anything unexpected without explicitly being allowed to. To achieve this amount of trustworthiness, projects like Debian developed some requirements for the software they include in main repositories and ship by default.
+  <p class="p">First of all, the entire source code of said software <a href="https://www.debian.org/doc/debian-policy/#the-debian-free-software-guidelines">should</a> be publically available to make independent behavior audit as easy as possible. This requirement guarantee that theoretically it is possible to reveal any unwanted hidden instruction before it will be actually executed by a real physical CPU.
+  <p class="p">Moreover, it must be legal to distribute both original and modified version of the program, so distribution author can legally remove said unwanted behavior from the code without waiting for original author's explicit permission (or perform some other modifications, fix security vulnerablities, add features etc. to enhance end user experience).
+  <p class="p">These rules are good per se, but none of them could guarantee that distribution maintainer is not able to include some unwanted instruction into the final binary right before producing the shipped package. In this scenario, whether we like it or not, user is obligated to trust either original author, or distribution maintainer without being able to fully examine entire chain of delivery. In order fix the issue, concept of reproducible builds has been brought up on the stage.
+  <p class="h3">A little remarqué
+  <p class="p">Similarly to assertion that &quot;no one reads the source code, therefore open source is pointless&quot;, one could think of saying like &quot;since bitwise reproduction of entire distiribution on a consumer-grade machine is far-from-trivial task and nobody besides qualified specialists is capable to get their head around such idea, hence package reproducibility doesn't provide any additional layer of trustworthyness because one way or another, the consumer still ought to trust some kind of qualified professional&quot;.
+  <p class="p">However: to ensure with almost 100% certainty everything is done right, it isn't necessary to always verify every single corner.
+  <p class="h3">They did the math
+  <p class="p">At the time of writing Debian stable branch comes with <a href="https://packages.debian.org/stable/allpackages?format=txt.gz">24821</a> packages available in default repositories. According to statistics gathered using popularity-contest package during this week debian stable was launched at least once on at least (anonymous survey is an <a href="http://popcon.debian.org/README">opt-in</a> option that must be explicitly enabled during installation process, so actual number of users is likely way higher) <a href="http://popcon.debian.org">62909</a> machines.
+  <div><img src="/img/gallery/1512920034.png"></div>
+  <p class="p">For the sake of simplicity, let's assume the user doesn't run any of 5.2% packages marked unreproducible, and restricted themself to remaining 23347. Let's also assume exactly one of them contains a <a href="https://en.wikipedia.org/wiki/Backdoor_(computing)">backdoor</a>, or some other kind of unexpected code, so the final hash-sum of a shipped binary doesn't match the one end user will get while reproducing the package on a personal machine.
+  <p class="p">According to a simplified formula of probability for <a href="https://en.wikipedia.org/wiki/Bernoulli_trial">Bernoulli trial</a> case, probability that one human will stumble upon package incorrectly built while checking 3 randomly chosen packages will be equal to:
+	<div><img class="crap-in-dark" src="/img/gallery/1513791401.svg"></div>
+  <p class="p">Not that promising. Let's assume then, packages were verified this way (3 packages per person) by 100 independent people instead. The new probability can be calculated with classical probability multiplication formula:</p>
+  <div><img class="crap-in-dark" src="/img/gallery/1513794102.svg"></div>
+  <p class="p">Where number in scientific notation is more precise value earlier rounded to 0.013%. Here's a relation between number of people who independently verified 3 packages and probability to stumble upon some error, visualized:</p>
+  <pre>res &lt;- 0.9998714928250161
+df &lt;- as.data.frame(seq(1,62909))
+df$power &lt;- 1 - res^df$`seq(1, 62909)`
+plot(df, type=&quot;l&quot;)
+grid(10, 10, lwd = 1)</pre>
+  <div><img class="crap-in-dark" src="/img/gallery/1512920088.png"></div>
+  <p class="p">As it can be concluded from above, approximately at the point around 30,000 involved users we can be fairly convinced that binary signature mismatch no doubt will be revealed by someone if there are any.
+  <p class="h3">But what if...
+  <p class="p">But what if every person bothered to check more than 3 packages? It is possible to simulate complete sheet of probabilities for every possible combination of variable factors. Here's how to make a table containing probabilities to find broken package relative to number of packages verified by a single person:
+  <pre>import math
+
+x = 23347
+for i in range (3,x):
+    a = math.factorial(23347)/math.factorial(i)*math.factorial(23347-i)
+    b = math.factorial(23346)/math.factorial(i-1)*math.factorial(23346-(i-1))
+    print(b/a)</pre>
+  <p class="p">Output graph will expectedly look like straight line from zero to 100% probability.
+  <div><img class="crap-in-dark" src="/img/gallery/1512920127.png"></div>
+  <p class="p">Wouldn't it be cool then to combine graphs mentioned above into one beatiful and complete visualization? Since probability to find broken package uxing X people independently equals to power with probability to find it by oneself as a base and number of involved people as an exponent, it is easy to create combined table.
+  <pre>library(readr)
+txt &lt;- read_csv(&quot;~/path/to/file.txt&quot;, col_names = FALSE)
+for (i in seq(2,62909)){txt[[i]] &lt;- 1-(1-txt$X1)^i}</pre>
+  <p class="p">And draw beautiful 3D visualization.
+  <pre>persp(as.matrix(txt))</pre>
+  <p class="p">This, however, will require enormous amount of RAM and mostly pointless, because every value above some point, say, [1000,1000], will be in practice indistinguishable from just 1. Let's just throw part of a table away. Following code:
+  <pre>for (i in seq(2,1000)){mx[[i]] &lt;- 1-(1-mx$X1)^i}</pre>
+  <p class="p">Will calculate only values from point [1,1] to [1000,1000]. Now we are ready to visualize.</p>
+  <pre>library(rgl)
+persp3d(as.matrix(txt),col=&quot;skyblue&quot;)</pre>
+  <div><img class="crap-in-dark" src="/img/gallery/1512920165.png"></div>
+  <p class="p">As can be seen, approximate probability to find broken package out of 23000 heap, tends to be considerably high only when about 800 people are ready to verify about 800 packages each. Plot with a limit in a point around [100,100] looks next way.</p>
+  <div><img class="crap-in-dark" src="/img/gallery/1512920190.png"></div>
+  <p class="p">Which means some little distributed amount of independent people can not easily achieve bulletproof reliability of the system even if entire information needed to reproduce binary builds with bitwise precision is publically available.
+  <p class="h3">So how to verify by hand if package is reproducible
+  <p class="p">I'll go through entire process. It's up to you to decide if it's hard or not. First of all, we need of course, clean Debian installation in a <a href="https://wiki.debian.org/QEMU">VM</a>, or on a real hardware, package groups <code>build-essential</code>, <code>fakeroot</code>, <code>devscripts</code> and a bit of patience. Also, it's very handy to download full <a href="https://reproducible.debian.net/reproducible.json">official structured list</a> of packages, even though recommended way to check out package status is to use simple python <a href="https://anonscm.debian.org/cgit/reproducible/misc.git/tree/unreproducible-installed">script</a>.
+  <p class="p">Let's start with something stupidly simple, so no package-specific bugs will interfere. Again, here we talk about VERY sensitive subject, where absolute bitwise precision matters. I choose my favorite piece of software ever – <a href="http://man.openbsd.org/OpenBSD-current/man1/tmux.1">tmux</a> terminal multiplexer, it's lightweight and has very high code quality. I've just made sure it marked as reproducible by debian project.</p>
+  <pre>{
+        &quot;architecture&quot;: &quot;amd64&quot;,
+        &quot;build_date&quot;: &quot;2017-06-16 00:13&quot;,
+        &quot;package&quot;: &quot;tmux&quot;,
+        &quot;status&quot;: &quot;reproducible&quot;,
+        &quot;suite&quot;: &quot;stretch&quot;,
+        &quot;version&quot;: &quot;2.3-4&quot;
+}</pre>
+  <p class="p"><strong>Step 1</strong>. Obtain source. Navigate to and empty directory and exec <code>apt source tmux</code>. Easy-peasy.</p>
+  <p class="p"><strong>Step 2</strong>. Obtain .buildinfo file with dependencies, environment variables and everything needed to reproduce exactly the same build. Navigate to continous integration system <a href="https://tests.reproducible-builds.org/debian/reproducible.html">page</a> and search for needed package. <a href="https://tests.reproducible-builds.org/debian/rb-pkg/stretch/amd64/tmux.html">Here</a> it is. Notice checksums at the beginning. It is <a href="https://en.wikipedia.org/wiki/Checksum">essential</a> to check package integrity for anyone unfamiliar with that shit.</p>
+  <pre>Checksums-Md5:
+ 70686e3b722bc94d48910d6a93914fa6 982704 tmux-dbgsym_2.3-4_amd64.deb
+ bdc7e6789cd735bf0bc843f775a69b71 264862 tmux_2.3-4_amd64.deb
+Checksums-Sha1:
+ f0b0b76faae4862c71e1dc5e6b0ed6c799cde561 982704 tmux-dbgsym_2.3-4_amd64.deb
+ bcadd30228602c50f49e84c255c7167b592251cf 264862 tmux_2.3-4_amd64.deb
+Checksums-Sha256:
+ 53d956fa9fbf4a49fb1cfe1d3c49c405a4ed7cfd00a1412b32be0e8a4af37c0f 982704 tmux-dbgsym_2.3-4_amd64.deb
+ 9166d818afedc4e571d0cbe5bab66c940837cd9c238d1de6d5369c64a692e707 264862 tmux_2.3-4_amd64.deb</pre>
+  <p class="p"><strong>Step 3</strong>. Install missing build dependecies using <code>sudo apt build-dep tmux</code>. Without this packages build likely will fail bacause of missing header files.</p>
+  <pre>he following NEW packages will be installed:
+  libevent-core-2.0-5 libevent-dev libevent-extra-2.0-5 libevent-openssl-2.0-5
+  libevent-pthreads-2.0-5 libncurses5-dev libtinfo-dev libutempter-dev
+  libutempter0 pkg-config
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 874 kB of archives.
+After this operation, 3,756 kB of additional disk space will be used.
+Do you want to continue? [Y/n]</pre>
+  <p class="p"><strong>Step 4</strong>. Carefully check out anything mentioned in .buildinfo file and make sure it set up exactly the same way on your installation. For example, in case of tmux we need to verify 4 environment variables. Let's print what we got on the host system:
+  <pre>$ printenv DEB_BUILD_OPTIONS LANG LC_ALL SOURCE_DATE_EPOCH
+en_US.UTF-8</pre>
+  <p class="p">It doesn't match. We need to set up this variables. This can be done using <code>export</code> command (don't worry, every mentioned change is temporary, after reboot they'll all be gone if we'll mess up).
+  <pre>$ export DEB_BUILD_OPTIONS=&quot;buildinfo=+all parallel=15&quot; LANG=&quot;C&quot; LC_ALL=&quot;C&quot; SOURCE_DATE_EPOCH=&quot;1477219712&quot;</pre>
+  <p class="p">Check out again</p>
+  <pre>$ printenv DEB_BUILD_OPTIONS LANG LC_ALL SOURCE_DATE_EPOCH
+buildinfo=+all parallel=15
+C
+C
+1477219712</pre>
+  <p class="p">Exactly! Seems like we're ready to build a package.</p>
+  <p class="p"><strong>Step 5</strong>. Building. Navigate to directory with name formatted like &quot;packagename-packageversion&quot;, in my case it's <code>tmux-2.3</code> and run <code>debuild -i -us -uc -b</code> as mentioned <a href="https://wiki.debian.org/BuildingTutorial">here</a>. Wait for the compilation, notice at the end of the process string which tells you where to fing compiled package. Like this:</p>
+  <pre>dpkg-deb: building package &#39;tmux&#39; in &#39;../tmux_2.3-4_amd64.deb&#39;.</pre>
+  <p class="p"><strong>Step 6</strong>. Verify. Invoke <code>sha256sum ../tmux_2.3-4_amd64.deb</code> and compare result to the one mentioned in buildinfo. If you've got the same numbers, congratulations, the package is reproducible! Here's what i've got:
+  <div><img src="/img/gallery/1512920216.png"></div>
+  <p class="p">Which means, package is reproducible. Or not, if hashes do not match.</p>
+  <hr>
+  <p class="centered"><a class="nl" href="/">index</a>→<a class="nl" href="/blog">blog</a>→<span class="nl">b19529</span>
+</body></html>

@@ -7,6 +7,30 @@ a {
     color: #2f95a4;
 }
 
+pre {
+    padding: 8px 5%;
+    overflow: hidden;
+    font-size: 15px;
+	font-family: luxi_monoregular, monospace;
+    background: #fbfbfb;
+    border-left: 5px solid #f7eb00;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+pre:hover,
+pre:focus {
+  width: min-content;
+}
+
+code {
+    font-size: 15px;
+    font-family: luxi_monoregular;
+    border: 2px solid #ff7fd9;
+    border-radius: 8px;
+    padding: 0px 6px;
+}
+
 img {
     width: 84%;
     margin: 24px auto;
@@ -53,9 +77,13 @@ hr {
 		border-color: #eee;
 	}
 
-	.q {
+	.q, pre {
 		background: #3e3d3d;
 	}
+	
+	.crap-in-dark {
+		filter: invert(80%)
+    }
 }
 
 body {
@@ -66,7 +94,7 @@ body {
 }
 
 p {
-    font-family: crimson, vollkorn, sans-serif
+    font-family: crimsonroman, vollkorn, sans-serif
 }
 
 .qa {
