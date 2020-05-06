@@ -1,0 +1,15 @@
+:root {
+	--page-bg: #fff;
+	--text-color: #222;
+	--horizontal-divider: #333;
+}
+
+@media (
+	prefers-color-scheme: dark
+) {
+	:root {
+		--page-bg: #222;
+		--text-color: #eee;
+		--horizontal-divider: #eee;
+	}
+}

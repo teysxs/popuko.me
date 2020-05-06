@@ -1,51 +1,43 @@
-html {
-    background: #fff;
-}
-
-hr {
-    width: 90%;
-    height: 0px;
-    border-width: 0px;
-    margin-top: 8px;
-    margin-bottom: 32px;
-    border-top: dashed 2px;
-    border-color: #333;
-}
-
 @media (
     prefers-color-scheme: dark
 ) {
-    html {
-	background: #222;
-    }
     .crap-in-dark {
 		filter: invert();
     }
     .instalogo {
-	filter: brightness(1.2)
+		filter: brightness(1.2)
     }
-	hr {
-		border-color: #eee;
-	}
+}
+
+html {
+    background: var(--page-bg);
+}
+
+hr {
+    width: var(--horizontal-divider-width);
+    height: 0px;
+    border-width: 0px;
+    margin-top: var(--margin-standard);
+    margin-bottom: 32px;
+    border-top: dashed 2px;
+    border-color: var(--horizontal-divider);
 }
 
 body {
     margin: 10px auto;
     width: 100%;
-    max-width: 450px;
+    max-width: var(--body-max-width-index);
     padding: 0
 }
 
 img {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width:100%
+    width: 100%;
 }
 
 .bottom-row {
     width: 10%;
     display: inline-block;
-    margin: 5px 0px 15px 38px
+    margin: 5px 0px 15px 38px;
 }
 
 .bottom-row-more {
