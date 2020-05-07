@@ -80,8 +80,8 @@ persp3d(as.matrix(txt),col=&quot;skyblue&quot;)</pre>
         &quot;suite&quot;: &quot;stretch&quot;,
         &quot;version&quot;: &quot;2.3-4&quot;
 }</pre>
-  <p class="p">Step 1. Obtain source. Navigate to and empty directory and exec <code>apt source tmux</code>. Easy-peasy.</p>
-  <p class="p">Step 2. Obtain .buildinfo file with dependencies, environment variables and everything needed to reproduce exactly the same build. Navigate to continous integration system <a href="https://tests.reproducible-builds.org/debian/reproducible.html">page</a> and search for needed package. <a href="https://tests.reproducible-builds.org/debian/rb-pkg/stretch/amd64/tmux.html">Here</a> it is. Notice checksums at the beginning. It is <a href="https://en.wikipedia.org/wiki/Checksum">essential</a> to check package integrity for anyone unfamiliar with that shit.</p>
+  <p class="p"><u>Step 1</u>. Obtain the source. Navigate to and empty directory and exec <code>apt source tmux</code>. Easy-peasy.</p>
+  <p class="p"><u>Step 2</u>. Obtain .buildinfo file with dependencies, environment variables and everything needed to reproduce exactly the same build. Navigate to continous integration system <a href="https://tests.reproducible-builds.org/debian/reproducible.html">page</a> and search for needed package. <a href="https://tests.reproducible-builds.org/debian/rb-pkg/stretch/amd64/tmux.html">Here</a> it is. Notice checksums at the beginning. It is <a href="https://en.wikipedia.org/wiki/Checksum">essential</a> to check package integrity for anyone unfamiliar with that shit.</p>
   <pre>Checksums-Md5:
  70686e3b722bc94d48910d6a93914fa6 982704 tmux-dbgsym_2.3-4_amd64.deb
  bdc7e6789cd735bf0bc843f775a69b71 264862 tmux_2.3-4_amd64.deb
@@ -91,7 +91,7 @@ Checksums-Sha1:
 Checksums-Sha256:
  53d956fa9fbf4a49fb1cfe1d3c49c405a4ed7cfd00a1412b32be0e8a4af37c0f 982704 tmux-dbgsym_2.3-4_amd64.deb
  9166d818afedc4e571d0cbe5bab66c940837cd9c238d1de6d5369c64a692e707 264862 tmux_2.3-4_amd64.deb</pre>
-  <p class="p">Step 3. Install missing build dependecies using <code>sudo apt build-dep tmux</code>. Without this packages build likely will fail bacause of missing header files.
+  <p class="p"><u>Step 3</u>. Install missing build dependecies using <code>sudo apt build-dep tmux</code>. Without this packages build likely will fail bacause of missing header files.
   <pre>he following NEW packages will be installed:
   libevent-core-2.0-5 libevent-dev libevent-extra-2.0-5 libevent-openssl-2.0-5
   libevent-pthreads-2.0-5 libncurses5-dev libtinfo-dev libutempter-dev
@@ -100,7 +100,7 @@ Checksums-Sha256:
 Need to get 874 kB of archives.
 After this operation, 3,756 kB of additional disk space will be used.
 Do you want to continue? [Y/n]</pre>
-  <p class="p">Step 4. Carefully check out anything mentioned in .buildinfo file and make sure it set up exactly the same way on your installation. For example, in case of tmux we need to verify 4 environment variables. Let's print what we got on the host system:
+  <p class="p"><u>Step 4</u>. Carefully check out anything mentioned in .buildinfo file and make sure it set up exactly the same way on your installation. For example, in case of tmux we need to verify 4 environment variables. Let's print what we got on the host system:
   <pre>$ printenv DEB_BUILD_OPTIONS LANG LC_ALL SOURCE_DATE_EPOCH
 en_US.UTF-8</pre>
   <p class="p">It doesn't match. We need to set up this variables. This can be done using <code>export</code> command (don't worry, every mentioned change is temporary, after reboot they'll all be gone if we'll mess up).
@@ -112,9 +112,9 @@ C
 C
 1477219712</pre>
   <p class="p">Exactly! Seems like we're ready to build a package.</p>
-  <p class="p">Step 5. Building. Navigate to directory with name formatted like &quot;packagename-packageversion&quot;, in my case it's <code>tmux-2.3</code> and run <code>debuild -i -us -uc -b</code> as mentioned <a href="https://wiki.debian.org/BuildingTutorial">here</a>. Wait for the compilation, notice at the end of the process string which tells you where to fing compiled package. Like this:
+  <p class="p"><u>Step 5</u>. Building. Navigate to directory with name formatted like &quot;packagename-packageversion&quot;, in my case it's <code>tmux-2.3</code> and run <code>debuild -i -us -uc -b</code> as mentioned <a href="https://wiki.debian.org/BuildingTutorial">here</a>. Wait for the compilation, notice at the end of the process string which tells you where to fing compiled package. Like this:
   <pre>dpkg-deb: building package &#39;tmux&#39; in &#39;../tmux_2.3-4_amd64.deb&#39;.</pre>
-  <p class="p">Step 6. Verify. Invoke <code>sha256sum ../tmux_2.3-4_amd64.deb</code> and compare result to the one mentioned in buildinfo. If you've got the same numbers, congratulations, the package is reproducible! Here's what i've got:
+  <p class="p"><u>Step 6</u>. Verify. Invoke <code>sha256sum ../tmux_2.3-4_amd64.deb</code> and compare result to the one mentioned in buildinfo. If you've got the same numbers, congratulations, the package is reproducible! Here's what i've got:
   <div><img src="/img/gallery/1512920216.png"></div>
   <p class="p">Which means, package is reproducible. Or not, if hashes do not match.
   <hr>
