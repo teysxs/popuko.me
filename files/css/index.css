@@ -4,9 +4,6 @@
     .crap-in-dark {
 		filter: invert();
     }
-    .instalogo {
-		filter: brightness(1.2)
-    }
 }
 
 html {

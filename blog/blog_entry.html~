@@ -3,22 +3,19 @@
 <meta
 charset="utf-8"><meta
 name="viewport" content="width=device-width, initial-scale=1">
-<title>Normal</title>
+<title>Title</title>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/files/css/colors.css">
 <link rel="stylesheet" href="/files/css/text.css">
 <link rel="stylesheet" href="/files/fonts/cmuserif_bold/stylesheet.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="/files/fonts/crimson_roman/stylesheet.css" type="text/css" charset="utf-8" />
 </head>
 <body>
-  <p class="h1">Normal
-  <p class="p">I've been asked to define "Normal" person. Which is usually considered rhetorical question, but turns out there is a painfully simple definite answer I've given instantly and without a shadow of a doubt.
-  <p class="q">Anyone who is not actively trying to harm others is normal.
-  <p class="p">A brief definition that basically covers everything nevertheless. Guess I'll stick to it from now on.
+  <p class="h1">Title
+  
   <hr>
-  <p class="centered"><a class="nl" href="/">index</a>→<a class="nl" href="/blog">blog</a>→<span class="nl">d865bc</span>
+  <p class="centered"><a class="nl" href="/">index</a>→<a class="nl" href="/blog">blog</a>→<span class="nl">049e68</span>
 </body></html>

@@ -1,7 +1,13 @@
 :root {
-	--page-bg: #fff;
+	--page-bg: #fffdfa;
 	--text-color: #222;
 	--horizontal-divider: #333;
+	--link-color: #0259a2;
+	--highlighted-background: #fbfbfb;
+	--preformatted-highlight: #f7eb00;
+	--inline-preformatted-highlight: #ff7a00;
+	--quote-highlight: #ff91aa;
+	--image-base-background: #ececec;
 }
 
 @media (
@@ -11,5 +17,11 @@
 		--page-bg: #222;
 		--text-color: #eee;
 		--horizontal-divider: #eee;
+		--link-color: #00ff0a;
+		--highlighted-background: #3e3d3d;
+		--preformatted-highlight: #f7eb00;
+		--inline-preformatted-highlight: #f7eb00;
+		--quote-highlight: #ff91aa;
+		--image-base-background: #494949;
 	}
 }

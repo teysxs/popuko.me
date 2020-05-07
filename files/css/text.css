@@ -1,10 +1,18 @@
+@media (
+    prefers-color-scheme: dark
+) {	
+	.crap-in-dark {
+		filter: invert(80%);
+    }
+}
+
 html {
-    background: #fff;
-    color: #222;
+    background: var(--page-bg);
+    color: var(--text-color);
 }
 
 a {
-    color: #2f95a4;
+    color: var(--link-color);
 }
 
 pre {
@@ -12,8 +20,8 @@ pre {
     overflow: auto;
     font-size: 15px;
 	font-family: luxi_monoregular, monospace;
-    background: #fbfbfb;
-    border-left: 5px solid #f7eb00;
+    background: var(--highlighted-background);
+    border-left: 5px solid var(--preformatted-highlight);
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -21,9 +29,10 @@ pre {
 code {
     font-size: 15px;
     font-family: luxi_monoregular;
-    border: 2px solid #ff7fd9;
-    border-radius: 8px;
-    padding: 0px 6px;
+    border: 2px solid var(--inline-preformatted-highlight);
+    border-radius: 6px;
+    padding: 2px 6px;
+	margin: 3px 3px;
 }
 
 img {
@@ -31,7 +40,7 @@ img {
     margin: 24px auto;
     display: block;
     padding: 3%;
-    background: #ececec;
+    background: var(--image-base-background);
 }
 
 hr {
@@ -41,44 +50,15 @@ hr {
     margin-top: 32px;
     margin-bottom: 32px;
     border-top: dashed 2px;
-    border-color: #333;
+    border-color: var(--horizontal-divider);
 }
 
 .q {
     padding: 8px 5%;
-    background: #fbfbfb;
-    border-left: 5px solid #ff91aa;
+    background: var(--highlighted-background);
+    border-left: 5px solid var(--quote-highlight);
     margin-left: 5%;
     margin-right: 5%;
-}
-
-@media (
-    prefers-color-scheme: dark
-) {
-    html {
-		background: #333;
-		color: #eee;
-    }
-    
-    a {
-		color: #a6e3e9;
-    }
-
-    img {
-		background: #494949;
-    }
-
-	hr {
-		border-color: #eee;
-	}
-
-	.q, pre {
-		background: #3e3d3d;
-	}
-	
-	.crap-in-dark {
-		filter: invert(80%)
-    }
 }
 
 body {
