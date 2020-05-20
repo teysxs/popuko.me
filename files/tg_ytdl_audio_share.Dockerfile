@@ -27,7 +27,4 @@ RUN echo "chat_id = $CHAT_ID" >> telegram.conf
 RUN curl $ENTRYPOINT > entrypoint.sh
 RUN chmod +x entrypoint.sh
 
-RUN cat telegram.conf
-RUN cat entrypoint.sh
-
 ENTRYPOINT [ "bash", "/tmp/entrypoint.sh" ]
