@@ -20,4 +20,6 @@ telegram-send \
 	--config telegram.conf \
 	--caption "${FILE_CAPTION}"
 
+rm $FILE_NAME
+
 echo "${FILE_NAME} uploaded successfully."
