@@ -2,7 +2,7 @@
     prefers-color-scheme: dark
 ) {
     .crap-in-dark {
-		filter: invert();
+        filter: invert();
     }
 }
 
@@ -41,5 +41,5 @@ img {
     width: 10%;
     display: inline-block;
     margin: 5px 38px 15px 38px;
-	float: right
+    float: right
 }
