@@ -68,8 +68,12 @@ body {
     font-size: 21px
 }
 
-p {
+p, ul {
     font-family: crimsonroman, vollkorn, sans-serif
+}
+
+ul {
+    padding: 0px 15%;
 }
 
 .qa {
