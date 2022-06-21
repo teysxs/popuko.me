@@ -129,3 +129,16 @@ ul {
 .nl {
     margin: 12px;
 }
+
+.spoiler-text {
+  background: black;
+  color: transparent;
+  user-select: none;
+  padding: 0px 5px 0px 5px;
+}
+
+.spoiler-text:hover,
+.spoiler-text:focus {
+  background: #e8e8e8;
+  color: black;
+}
