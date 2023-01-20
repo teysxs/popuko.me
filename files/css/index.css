@@ -16,7 +16,7 @@ hr {
     border-width: 0px;
     margin-top: var(--margin-standard);
     margin-bottom: 32px;
-    border-top: dashed 2px;
+    border-top: dashed 5px;
     border-color: var(--horizontal-divider);
 }
 
@@ -43,3 +43,4 @@ img {
     margin: 5px 38px 15px 38px;
     float: right
 }
+
