@@ -7,7 +7,7 @@
    viewBox="0 0 135 42"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="matrix.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="174.63012"
-     inkscape:cy="104.42452"
+     inkscape:zoom="31.678384"
+     inkscape:cx="314.83614"
+     inkscape:cy="69.874145"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -90,7 +90,9 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-global="false"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="11.99372,45.43582"
        orientation="1,0"
@@ -119,11 +121,13 @@
     <sodipodi:guide
        position="83.154764,25.25093"
        orientation="1,0"
-       id="guide10026" />
+       id="guide10026"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="85.587986,25.121001"
        orientation="1,0"
-       id="guide10028" />
+       id="guide10028"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -186,7 +190,7 @@
        style="fill:#1a1a1a;fill-rule:evenodd;stroke-width:0.499133"
        id="path9922"
        cx="129.50844"
-       cy="103.96689"
+       cy="103.43772"
        r="1.2180642" />
     <g
        aria-label="[M]"
