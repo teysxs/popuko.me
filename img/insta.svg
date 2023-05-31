@@ -7,7 +7,7 @@
    viewBox="0 0 135 42"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="insta.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="103.25893"
-     inkscape:cy="84.598214"
+     inkscape:zoom="3.959798"
+     inkscape:cx="99.626295"
+     inkscape:cy="95.838223"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -90,7 +90,9 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-global="false"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="12.000744,63.452753"
        orientation="1,0"
@@ -183,7 +185,7 @@
     </g>
     <g
        id="g935"
-       transform="matrix(0.0362954,0,0,0.0362954,56.903319,97.73366)">
+       transform="matrix(0.0362954,0,0,0.0362954,56.504916,97.441486)">
       <g
          id="g862">
         <linearGradient
